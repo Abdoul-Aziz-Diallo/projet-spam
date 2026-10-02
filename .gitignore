@@ -1,0 +1,12 @@
+# Données (trop volumineuses, à télécharger depuis Kaggle)
+data/raw/
+data/processed/train.csv
+data/processed/test.csv
+data/processed/enron_clean.csv
+data/processed/predictions_bert.csv
+
+# Python et Jupyter
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.env

@@ -1,0 +1,2 @@
+modèle,accuracy,précision,rappel,f1,faux_positifs,faux_négatifs,f1_validation_croisée,temps_entraînement_s
+"DistilBERT (10000 emails, 2 époques)",0.9852200201545179,0.9828754905458438,0.9856887298747764,0.9842801000357271,48,40,,209.8
