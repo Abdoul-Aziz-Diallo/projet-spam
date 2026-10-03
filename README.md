@@ -16,13 +16,13 @@ Classer automatiquement des emails en spam ou non-spam (classification binaire s
 
 \## Données
 
-\- Corpus Enron, fichier `Enron.csv` du dataset Kaggle « Phishing Email Dataset » (Naser Abdullah Alam et al.), licence CC BY-SA 4.0.
+\- Corpus Enron (`Enron.csv`) du dataset Kaggle « Phishing Email Dataset » (Naser Abdullah Alam et al.), licence CC BY-SA 4.0.
 
-\- 29 766 emails après nettoyage (46,9 % de spam).
+\- 29 766 emails après nettoyage, dont 46,9 % de spam.
 
-\- Les données ne sont pas incluses dans le dépôt : téléchargez-les sur Kaggle et placez `Enron.csv` dans `data/raw/`.
+\- Les données ne sont pas dans le dépôt : téléchargez-les sur Kaggle et placez les CSV dans `data/raw/`.
 
-&#x20; Les fichiers `Ling.csv` et `SpamAssasin.csv` servent uniquement au test de robustesse.
+&#x20; `Ling.csv` et `SpamAssasin.csv` servent uniquement au test de robustesse.
 
 
 
@@ -68,23 +68,27 @@ Classer automatiquement des emails en spam ou non-spam (classification binaire s
 
 Meilleur modèle : SVM linéaire, TF-IDF en unigrammes et bigrammes, C = 1.
 
-Accuracy \[99,16 %], F1 \[99,11 %], \[35] faux positifs, \[15] faux négatifs.
+Accuracy 99,16 %, F1 99,11 %, 35 faux positifs, 15 faux négatifs.
 
 
 
 Limite importante : testé sur les corpus Ling et SpamAssassin, le modèle ne généralise pas
 
-(accuracy \[60,7 %] et \[40,1 %]). Voir le notebook 09 et le rapport.
+(accuracy 60,7 % et 40,1 %). Voir le notebook 09 et le rapport.
 
 
 
 \## Installation
 
+```bash
+
 pip install -r requirements.txt
 
 jupyter notebook
 
+```
 
+Les notebooks s'exécutent dans l'ordre. Le notebook `07b` (DistilBERT) demande `torch`,
 
-Les notebooks s'exécutent dans l'ordre. Le notebook `07b` (DistilBERT) demande `torch` et `transformers` et un GPU (Google Colab).
+`transformers` et un GPU (Google Colab).
 
